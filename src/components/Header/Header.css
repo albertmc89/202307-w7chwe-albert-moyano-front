@@ -1,5 +1,5 @@
 .header {
-  padding: 40px;
+  padding: 20px 20px 0;
   color: var(--white);
   text-align: center;
   font-size: 1.2rem;
@@ -10,4 +10,8 @@
     rgba(24, 32, 85, 1) 41%,
     rgba(2, 0, 36, 1) 93%
   );
+}
+
+.header-title {
+  margin-bottom: 10px;
 }
