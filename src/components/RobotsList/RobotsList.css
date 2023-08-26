@@ -1,0 +1,12 @@
+.robots-title {
+  text-align: center;
+  color: var(--primaryColor);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.robots-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
