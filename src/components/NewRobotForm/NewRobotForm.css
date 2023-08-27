@@ -1,9 +1,11 @@
 .form {
-  width: 75%;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  background-color: rgba(21, 104, 167, 0.4);
+  border-radius: 5px;
 }
 
 .from-control {
@@ -22,15 +24,16 @@
 .form__label {
   font-size: 1.2rem;
   font-weight: 700;
+  text-decoration: double;
   color: var(--white);
 }
 
 input {
-  border: none;
+  border: 1px solid var(--white);
   border-radius: 5px;
-  background: rgb(129, 132, 149);
+  background: rgba(7, 2, 52, 0.8);
   padding: 10px;
-  color: var(--black);
+  color: var(--white);
 }
 
 .options__control {
@@ -50,5 +53,5 @@ input {
   padding: 15px;
   color: var(--white);
   border-radius: 5px;
-  background: rgb(129, 132, 149);
+  background: rgba(7, 2, 52, 0.8);
 }

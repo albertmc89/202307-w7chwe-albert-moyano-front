@@ -73,7 +73,7 @@ const NewRobotForm = () => {
       </div>
       <div className="form__button-container">
         <button type="submit" className="button form__button">
-          Add robot
+          Create robot
         </button>
       </div>
     </form>

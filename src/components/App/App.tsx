@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import NewRobotPage from "../../pages/NewRobotPage/NewRobotPage";
 import RobotsListPage from "../../pages/RobotsListPage/RobotsListPage";
 import Header from "../Header/Header";
-import NewRobotForm from "../NewRobotForm/NewRobotForm";
 import "./App.css";
 
 const App = (): React.ReactElement => {
@@ -9,10 +9,10 @@ const App = (): React.ReactElement => {
     <div className="container">
       <Header />
       <main className="main-content">
-        <NewRobotForm />
         <Routes>
           <Route path="/home" element={<RobotsListPage />} />
           <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/createrobot" element={<NewRobotPage />} />
         </Routes>
       </main>
     </div>
