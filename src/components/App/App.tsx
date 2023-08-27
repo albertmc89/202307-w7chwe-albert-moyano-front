@@ -5,6 +5,7 @@ import { useAppDispatch } from "../../store";
 import { loadRobotsActionCreator } from "../../store/robots/robotsSlice";
 import Header from "../Header/Header";
 import RobotsList from "../RobotsList/RobotsList";
+import "./App.css";
 
 const App = (): React.ReactElement => {
   const dispatch = useAppDispatch();

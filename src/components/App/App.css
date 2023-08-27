@@ -1,0 +1,10 @@
+.container {
+  padding: 20px;
+  background: rgb(37, 47, 98);
+  background: linear-gradient(
+    90deg,
+    rgba(37, 47, 98, 0.9990589985994398) 15%,
+    rgba(24, 32, 85, 1) 41%,
+    rgba(2, 0, 36, 1) 93%
+  );
+}
