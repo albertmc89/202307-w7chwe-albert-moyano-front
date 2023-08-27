@@ -1,8 +1,15 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import useRobotsApi from "../../hooks/useRobotsApi";
+import { addRobotActionCreator } from "../../store/robots/robotsSlice";
 import { Robot } from "../../types";
 import "./NewRobotForm.css";
 
 const NewRobotForm = () => {
+  const dispatch = useDispatch();
+
+  const { addRobotApi } = useRobotsApi();
+
   const [newRobot, setNewRobot] = useState<Omit<Robot, "id">>({
     name: "",
     image: "",
@@ -17,8 +24,16 @@ const NewRobotForm = () => {
     });
   };
 
+  const submitForm = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const robot = await addRobotApi(newRobot);
+
+    dispatch(addRobotActionCreator(robot));
+  };
+
   return (
-    <form className="form">
+    <form className="form" onSubmit={submitForm}>
       <div className="from-control">
         <label htmlFor="name" className="form__label">
           Robot name:

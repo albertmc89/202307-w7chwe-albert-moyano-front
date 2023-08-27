@@ -37,7 +37,17 @@ const useRobotsApi = () => {
     }
   }, [apiUrl, dispatch]);
 
-  return { getRobots };
+  const addRobotApi = async (newRobot: Omit<Robot, "id">) => {
+    try {
+      const { data } = await axios.post<Robot>(`${apiUrl}robots`, newRobot);
+
+      return data;
+    } catch {
+      throw new Error("Couldn't add robot");
+    }
+  };
+
+  return { getRobots, addRobotApi };
 };
 
 export default useRobotsApi;
