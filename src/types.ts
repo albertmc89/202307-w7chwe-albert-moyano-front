@@ -6,6 +6,9 @@ export interface ApiRobot {
   endurance: number;
 }
 
+export interface ApiRobots {
+  robots: ApiRobot[];
+}
 export interface Robot extends Omit<ApiRobot, "_id"> {
   id: string;
 }
