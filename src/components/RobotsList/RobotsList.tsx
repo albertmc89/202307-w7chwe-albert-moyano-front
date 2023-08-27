@@ -7,9 +7,6 @@ const RobotsList = (): React.ReactElement => {
 
   return (
     <>
-      <div className="robots-title">
-        <h2>The Robots</h2>
-      </div>
       <ul className="robots-list">
         {robots.map((robot) => (
           <li key={robot.id}>
