@@ -1,14 +1,17 @@
 .robot {
-  width: 250px;
+  display: flex;
+  width: 400px;
+  height: 230px;
+  gap: 10px;
   background: linear-gradient(
     90deg,
-    rgba(37, 47, 98, 0.9990589985994398) 15%,
-    rgba(24, 32, 85, 1) 41%,
-    rgba(2, 0, 36, 1) 93%
+    rgba(37, 47, 98, 0.9990589985994398) 5%,
+    rgb(48, 55, 101) 35%
   );
   color: rgb(238, 255, 0);
+  border: 1px solid var(--black);
   border-radius: 50px;
-  box-shadow: 1px 3px 15px 1px rgba(49, 60, 114, 0.673);
+  box-shadow: 2px 3px 15px 3px rgba(43, 51, 91, 0.673);
   padding: 20px;
 }
 
@@ -27,15 +30,16 @@
 .robot__data-container {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   align-items: center;
-  text-align: center;
+  justify-content: center;
 }
 
 .robot__data-list {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  align-items: end;
+  gap: 8px;
 }
 
 .robot__name {
