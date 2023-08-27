@@ -55,7 +55,7 @@ const NewRobotForm = () => {
           min="1"
           max="10"
           id="speed"
-          value={newRobot.speed}
+          value={newRobot.speed === 0 ? "" : newRobot.speed}
           className="form__input"
           onChange={changeNewUser}
         />
@@ -69,7 +69,7 @@ const NewRobotForm = () => {
           min="1"
           max="10"
           id="endurance"
-          value={newRobot.endurance}
+          value={newRobot.endurance === 0 ? "" : newRobot.endurance}
           className="form__input"
           onChange={changeNewUser}
         />
