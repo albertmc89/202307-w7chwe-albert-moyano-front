@@ -1,11 +1,19 @@
 import axios from "axios";
 import { useCallback } from "react";
+import { useDispatch } from "react-redux";
+import {
+  startLoadingActionCreator,
+  stopLoadingActionCreator,
+} from "../store/ui/uiSlice";
 import { ApiRobots, Robot } from "../types";
 
 const useRobotsApi = () => {
   const apiUrl = import.meta.env.VITE_API_ROBOTS_URL;
+  const dispatch = useDispatch();
 
   const getRobots = useCallback(async (): Promise<Robot[]> => {
+    dispatch(startLoadingActionCreator());
+
     try {
       const { data: apiRobots } = await axios.get<ApiRobots>(`${apiUrl}robots`);
 
@@ -20,12 +28,14 @@ const useRobotsApi = () => {
           endurance,
         }),
       );
+      dispatch(stopLoadingActionCreator());
 
       return robots;
     } catch {
+      dispatch(stopLoadingActionCreator());
       throw new Error("Can't get any robot");
     }
-  }, [apiUrl]);
+  }, [apiUrl, dispatch]);
 
   return { getRobots };
 };
