@@ -5,7 +5,7 @@ export const mockRobots: Robot[] = [
     id: "1",
     name: "Chronodroid",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/8/84/Toyota_Robot_at_Toyota_Kaikan.jpg",
+      "https://img.freepik.com/premium-photo/character-design-little-robot-isolated-background-created-with-generative-ai-technology_67092-2464.jpg",
     speed: 9,
     endurance: 7,
   },
@@ -13,7 +13,7 @@ export const mockRobots: Robot[] = [
     id: "2",
     name: "QuantaBot",
     image:
-      "https://w7.pngwing.com/pngs/847/520/png-transparent-robot-action-toy-figures-character-action-fiction-robot-electronics-fictional-character-action-film.png",
+      "https://as1.ftcdn.net/v2/jpg/05/65/51/00/1000_F_565510061_UvmZhOGicRUkxNW0v9K2t81XInzJPiPm.jpg",
     speed: 6,
     endurance: 4,
   },
@@ -27,9 +27,9 @@ export const mockRobots: Robot[] = [
   },
   {
     id: "4",
-    name: "Maximus",
+    name: "BlitzBot",
     image:
-      "https://www.enter.co/wp-content/uploads/2023/04/pexels-pavel-danilyuk-8294618.jpg",
+      "https://png.pngtree.com/thumb_back/fw800/background/20230704/pngtree-white-background-depicts-the-fast-speed-technology-concept-illustrated-by-a-image_3754627.png",
     speed: 9,
     endurance: 9,
   },
@@ -41,7 +41,7 @@ export const apiMockRobots: ApiRobots = {
       _id: "1",
       name: "Chronodroid",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/8/84/Toyota_Robot_at_Toyota_Kaikan.jpg",
+        "https://img.freepik.com/premium-photo/character-design-little-robot-isolated-background-created-with-generative-ai-technology_67092-2464.jpg",
       speed: 9,
       endurance: 7,
     },
@@ -49,7 +49,7 @@ export const apiMockRobots: ApiRobots = {
       _id: "2",
       name: "QuantaBot",
       image:
-        "https://w7.pngwing.com/pngs/847/520/png-transparent-robot-action-toy-figures-character-action-fiction-robot-electronics-fictional-character-action-film.png",
+        "https://as1.ftcdn.net/v2/jpg/05/65/51/00/1000_F_565510061_UvmZhOGicRUkxNW0v9K2t81XInzJPiPm.jpg",
       speed: 6,
       endurance: 4,
     },
@@ -63,9 +63,9 @@ export const apiMockRobots: ApiRobots = {
     },
     {
       _id: "4",
-      name: "Maximus",
+      name: "BlitzBot",
       image:
-        "https://www.enter.co/wp-content/uploads/2023/04/pexels-pavel-danilyuk-8294618.jpg",
+        "https://png.pngtree.com/thumb_back/fw800/background/20230704/pngtree-white-background-depicts-the-fast-speed-technology-concept-illustrated-by-a-image_3754627.png",
       speed: 9,
       endurance: 9,
     },
