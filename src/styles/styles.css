@@ -1,5 +1,6 @@
 :root {
   --primaryColor: #0b2048;
+  --secondaryColor: rgba(7, 2, 52, 0.8);
   --white: #fff;
   --black: #000;
   --primaryFont: "Nunito", sans-serif;
