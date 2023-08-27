@@ -37,6 +37,8 @@ const NewRobotForm = () => {
         </label>
         <input
           type="number"
+          min="1"
+          max="10"
           id="speed"
           value={newRobot.speed}
           className="form__input"
@@ -49,6 +51,8 @@ const NewRobotForm = () => {
         </label>
         <input
           type="number"
+          min="1"
+          max="10"
           id="endurance"
           value={newRobot.endurance}
           className="form__input"
