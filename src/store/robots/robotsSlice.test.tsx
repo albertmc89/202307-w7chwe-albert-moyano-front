@@ -1,6 +1,10 @@
 import { mockRobots } from "../../mocks/robotsMock";
 import { RobotState } from "../types";
-import { loadRobotsActionCreator, robotsReducer } from "./robotsSlice";
+import {
+  addRobotActionCreator,
+  loadRobotsActionCreator,
+  robotsReducer,
+} from "./robotsSlice";
 
 describe("Given a robotsReducer reducer", () => {
   describe("When it receives a load robots action with two robots 'Chronodroid' and 'Quantabot'", () => {
@@ -15,6 +19,31 @@ describe("Given a robotsReducer reducer", () => {
       const newRobotState = robotsReducer(currentRobotState, loadRobotsAction);
 
       expect(newRobotState).toHaveProperty("robots", robots);
+    });
+  });
+
+  describe("When it receives a state with one user and addUser action", () => {
+    test("Then it should return a new state with the user with id 11 added", () => {
+      const currentRobotsState: RobotState = {
+        robots: mockRobots,
+      };
+
+      const robotCreated = {
+        id: "11",
+        name: "Benito Camelas",
+        speed: 2,
+        endurance: 10,
+        image: "",
+      };
+
+      const addRobotAction = addRobotActionCreator(robotCreated);
+
+      const newUserState = robotsReducer(currentRobotsState, addRobotAction);
+
+      expect(newUserState.robots).toContain(robotCreated);
+      expect(newUserState.robots).toHaveLength(
+        currentRobotsState.robots.length + 1,
+      );
     });
   });
 });
