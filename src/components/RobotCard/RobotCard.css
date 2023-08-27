@@ -1,7 +1,8 @@
 .robot {
   display: flex;
-  width: 400px;
-  height: 230px;
+  flex-direction: column;
+  width: 280px;
+  min-height: 230px;
   gap: 10px;
   background: var(--secondaryColor);
   color: var(--white);
@@ -40,4 +41,12 @@
 .robot__name {
   margin: 0;
   padding: 10px;
+}
+
+@media (min-width: 800px) and (max-width: 2440px) {
+  .robot {
+    flex-direction: row;
+    width: 400px;
+    height: 200px;
+  }
 }

@@ -4,3 +4,11 @@
   align-items: center;
   gap: 25px;
 }
+
+@media (min-width: 800px) and (max-width: 2440px) {
+  .robots-list {
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    justify-content: center;
+  }
+}
