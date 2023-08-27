@@ -71,3 +71,20 @@ export const apiMockRobots: ApiRobots = {
     },
   ],
 };
+
+export const newRobotMock: Robot = {
+  id: "15",
+  name: "BlitzBot",
+  image:
+    "https://png.pngtree.com/thumb_back/fw800/background/20230704/pngtree-white-background-depicts-the-fast-speed-technology-concept-illustrated-by-a-image_3754627.png",
+  speed: 5,
+  endurance: 9,
+};
+
+export const newRobotMockApi: Omit<Robot, "id"> = {
+  name: "BlitzBot",
+  image:
+    "https://png.pngtree.com/thumb_back/fw800/background/20230704/pngtree-white-background-depicts-the-fast-speed-technology-concept-illustrated-by-a-image_3754627.png",
+  speed: 5,
+  endurance: 9,
+};
