@@ -22,8 +22,8 @@ describe("Given a robotsReducer reducer", () => {
     });
   });
 
-  describe("When it receives a state with one user and addUser action", () => {
-    test("Then it should return a new state with the user with id 11 added", () => {
+  describe("When it receives a state with one user and addRobot action", () => {
+    test("Then it should return a new state with the robot with id 11 added", () => {
       const currentRobotsState: RobotState = {
         robots: mockRobots,
       };
