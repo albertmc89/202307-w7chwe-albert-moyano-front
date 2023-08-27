@@ -27,7 +27,7 @@ export const mockRobots: Robot[] = [
   },
   {
     id: "4",
-    name: "ElectraSphere",
+    name: "Maximus",
     image:
       "https://www.enter.co/wp-content/uploads/2023/04/pexels-pavel-danilyuk-8294618.jpg",
     speed: 9,
@@ -63,7 +63,7 @@ export const apiMockRobots: ApiRobots = {
     },
     {
       _id: "4",
-      name: "ElectraSphere",
+      name: "Maximus",
       image:
         "https://www.enter.co/wp-content/uploads/2023/04/pexels-pavel-danilyuk-8294618.jpg",
       speed: 9,

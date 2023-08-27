@@ -19,10 +19,12 @@ const RobotsListPage = (): React.ReactElement => {
 
   return (
     <>
-      <div className="robots-title">
-        <h2>The Robots</h2>
-      </div>
-      <RobotsList />
+      <section className="robotslist-page">
+        <div className="robots-title">
+          <h2>The Robots</h2>
+        </div>
+        <RobotsList />
+      </section>
     </>
   );
 };

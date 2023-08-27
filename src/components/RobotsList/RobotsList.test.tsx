@@ -1,12 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
-import { store } from "../../store";
+import { mockRobots } from "../../mocks/robotsMock";
+import { setupStore } from "../../store";
 import RobotsList from "./RobotsList";
 
 describe("Given a RobotsList component", () => {
-  describe("When it's rendered", () => {
-    test("Then it should show 'The Robots' as heading", () => {
-      const expectedHeadingText = "The Robots";
+  describe("When it's rendered 'Chronodroid', 'QuantaBot', 'ElectraSphere'", () => {
+    test("Then it should show the names 'Chronodroid', 'QuantaBot', 'ElectraSphere' and 'Maximus' as heading", () => {
+      const store = setupStore({ robotsState: { robots: mockRobots } });
 
       render(
         <Provider store={store}>
@@ -14,11 +15,13 @@ describe("Given a RobotsList component", () => {
         </Provider>,
       );
 
-      const textHeading = screen.getByRole("heading", {
-        name: expectedHeadingText,
-      });
+      mockRobots.forEach((robot) => {
+        const expectedHeading = screen.getByRole("heading", {
+          name: robot.name,
+        });
 
-      expect(textHeading).toBeInTheDocument();
+        expect(expectedHeading).toBeInTheDocument();
+      });
     });
   });
 });

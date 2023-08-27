@@ -6,15 +6,13 @@ const RobotsList = (): React.ReactElement => {
   const robots = useAppSelector((state) => state.robotsState.robots);
 
   return (
-    <>
-      <ul className="robots-list">
-        {robots.map((robot) => (
-          <li key={robot.id}>
-            <RobotCard robot={robot} />
-          </li>
-        ))}
-      </ul>
-    </>
+    <ul className="robots-list">
+      {robots.map((robot) => (
+        <li key={robot.id}>
+          <RobotCard robot={robot} />
+        </li>
+      ))}
+    </ul>
   );
 };
 
