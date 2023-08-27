@@ -9,9 +9,9 @@ const useRobotsApi = () => {
     try {
       const { data: apiRobots } = await axios.get<ApiRobots>(`${apiUrl}robots`);
 
-      const apiRobotsMap = apiRobots.robots;
+      const apiRobotsList = apiRobots.robots;
 
-      const robots = apiRobotsMap.map<Robot>(
+      const robots = apiRobotsList.map<Robot>(
         ({ _id, name, image, speed, endurance }) => ({
           id: _id,
           name,
