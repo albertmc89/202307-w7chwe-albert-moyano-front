@@ -1,4 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import ProtectedRoute from "../../ProtectedRoute/ProtectedRoute";
+import LoginPage from "../../pages/LoginPage/LoginPage";
 import NewRobotPage from "../../pages/NewRobotPage/NewRobotPage";
 import RobotsListPage from "../../pages/RobotsListPage/RobotsListPage";
 import { useAppSelector } from "../../store";
@@ -14,9 +16,31 @@ const App = (): React.ReactElement => {
       <Header />
       <main className="main-content">
         <Routes>
-          <Route path="/home" element={<RobotsListPage />} />
-          <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/createrobot" element={<NewRobotPage />} />
+          <Route
+            path="/home"
+            element={
+              <ProtectedRoute>
+                <RobotsListPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <Navigate to="/home" />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/create-robot"
+            element={
+              <ProtectedRoute>
+                <NewRobotPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route path={"login-page"} element={<LoginPage />} />
         </Routes>
       </main>
       {isLoading && <Loading />}
