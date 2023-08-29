@@ -3,7 +3,7 @@ import "./Navigation.css";
 
 const Navigation = (): React.ReactElement => {
   return (
-    <nav className="main-navigation">
+    <>
       <ul className="navigation-list">
         <li>
           <NavLink className="navigation-list__link" to="/home">
@@ -11,12 +11,12 @@ const Navigation = (): React.ReactElement => {
           </NavLink>
         </li>
         <li>
-          <NavLink className="navigation-list__link" to="/createrobot">
-            Create Robot
+          <NavLink className="navigation-list__link" to="/create-robot">
+            Robot creator
           </NavLink>
         </li>
       </ul>
-    </nav>
+    </>
   );
 };
 
