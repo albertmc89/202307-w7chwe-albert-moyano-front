@@ -1,13 +1,17 @@
 import { useEffect } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import RobotsList from "../../components/RobotsList/RobotsList";
+import { auth } from "../../firebase";
 import useRobotsApi from "../../hooks/useRobotsApi";
 import { useAppDispatch } from "../../store";
 import { loadRobotsActionCreator } from "../../store/robots/robotsSlice";
+import LoginPage from "../LoginPage/LoginPage";
 import "./RobotsListPage.css";
 
 const RobotsListPage = (): React.ReactElement => {
   const dispatch = useAppDispatch();
   const { getRobots } = useRobotsApi();
+  const [user] = useAuthState(auth);
 
   useEffect(() => {
     (async () => {
@@ -20,10 +24,9 @@ const RobotsListPage = (): React.ReactElement => {
   return (
     <>
       <section className="robotslist-page">
-        <div className="robots-title">
-          <h2>The Robots</h2>
-        </div>
-        <RobotsList />
+        <LoginPage />
+        {user && <h2>{`Welcome ${user.providerData[0].displayName}`}</h2>}
+        {user && <RobotsList />}
       </section>
     </>
   );

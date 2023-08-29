@@ -4,9 +4,9 @@ import Navigation from "./Navigation";
 
 describe("Given a Navigation component", () => {
   describe("When it's rendered", () => {
-    test("Then it should show the links 'Home' and 'Create Robot'", () => {
+    test("Then it should show the links 'Home' and 'Robot creator'", () => {
       const navHome = "Home";
-      const navCreate = "Create Robot";
+      const navCreate = "Robot creator";
 
       render(
         <BrowserRouter>
